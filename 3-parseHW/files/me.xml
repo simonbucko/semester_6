@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+    <name>Simon</name>
+    <age>20</age>
+    <hobbies>
+        <hobby>music</hobby>
+        <hobby>food</hobby>
+    </hobbies>
+</root>
