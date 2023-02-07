@@ -1,2 +1,2 @@
-name::age::origin
-simon::20::slovakia
+name:age:origin
+simon:20:slovakia

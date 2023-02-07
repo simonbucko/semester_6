@@ -23,7 +23,7 @@ try {
 }
 
 try {
-  console.log(parseText("../files/me.txt", "::"));
+  console.log(parseText("../files/me.txt", ":"));
 } catch (error) {
   console.log(error);
 }
