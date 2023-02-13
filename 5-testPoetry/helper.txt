@@ -3,6 +3,8 @@ use `-n` as parameter to say "no interaction"
 
 `poetry shell` to enter the environment
 
-`poetry install` to install packages in the environment
+`poetry add [package name]` to add packages in the environment
+
+`poetry install` to install packages 
 
 `exit` to exit the env
