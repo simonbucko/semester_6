@@ -1,0 +1,8 @@
+`poetry init` to initialize 
+use `-n` as parameter to say "no interaction" 
+
+`poetry shell` to enter the environment
+
+`poetry install` to install packages in the environment
+
+`exit` to exit the env

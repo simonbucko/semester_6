@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "5-testpoetry"
+version = "0.1.0"
+description = ""
+authors = ["Šimon Bučko <sibu@queue-it.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "5_testpoetry"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+emoji = "^2.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
