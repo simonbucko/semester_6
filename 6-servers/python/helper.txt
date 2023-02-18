@@ -1,0 +1,1 @@
+use `uvicorn main:app --reload` to run the application where `main` is the name of the file and the `app` is the instance of fastapi
