@@ -6,15 +6,8 @@ import yaml from "js-yaml";
 const app = express();
 const PORT = 3000;
 
-app.use(express.json());
-
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
-
-app.post("/api/json", (req, res) => {
-  console.log(req.body);
-  res.json("hello");
+app.post("/api/json", bodyParser.json(), (req, res) => {
+  res.json(req.body);
 });
 
 app.post(
