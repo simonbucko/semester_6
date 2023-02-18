@@ -1,6 +1,7 @@
 import express from "express";
-import xml2js from "xml2js";
 import xmlparser from "express-xml-bodyparser";
+import bodyParser from "body-parser";
+import yaml from "js-yaml";
 
 const app = express();
 const PORT = 3000;
@@ -16,10 +17,14 @@ app.post("/api/json", (req, res) => {
   res.json("hello");
 });
 
-app.post("/api/yaml", (req, res) => {
-  console.log(req.body);
-  res.json("hello");
-});
+app.post(
+  "/api/yaml",
+  bodyParser.text({ type: "application/x-yaml" }),
+  (req, res) => {
+    const jsonData = yaml.load(req.body);
+    res.json(jsonData);
+  }
+);
 
 app.post(
   "/api/xml",
