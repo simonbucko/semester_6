@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "python"
+version = "0.1.0"
+description = ""
+authors = ["Šimon Bučko <sibu@queue-it.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+poetry-dotenv-plugin = "^0.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

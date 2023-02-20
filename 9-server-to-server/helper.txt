@@ -1,0 +1,2 @@
+use `ngrok http 8080` to create the ngrok tunneling against the localhost
+use `nodemon --exec python main.py` to run the nodemon on python files, but it will not work to run the server
