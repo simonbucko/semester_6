@@ -48,6 +48,23 @@ app.post(
   }
 );
 
+app.post(
+  "/api/text",
+  bodyParser.text({ type: "text/csv" }),
+  async (req, res) => {
+    console.log(req.body);
+    const response = await fetch("http://127.0.0.1:8000/api/text", {
+      method: "POST",
+      headers: {
+        "Content-Type": "text/plain",
+      },
+      body: req.body,
+    });
+    const data = await response.json();
+    res.json(data);
+  }
+);
+
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
 });
