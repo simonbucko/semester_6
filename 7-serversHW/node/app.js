@@ -6,6 +6,7 @@ import fetch from "node-fetch";
 
 const app = express();
 const PORT = 3000;
+const PYTHON_SERVER_URL = "http://127.0.0.1:8000";
 
 app.post("/api/json", bodyParser.json(), (req, res) => {
   res.json(req.body);
@@ -36,7 +37,7 @@ app.post(
   bodyParser.text({ type: "text/csv" }),
   async (req, res) => {
     console.log(req.body);
-    const response = await fetch("http://127.0.0.1:8000/api/csv", {
+    const response = await fetch(`${PYTHON_SERVER_URL}/api/csv`, {
       method: "POST",
       headers: {
         "Content-Type": "text/csv",
@@ -53,7 +54,7 @@ app.post(
   bodyParser.text({ type: "text/csv" }),
   async (req, res) => {
     console.log(req.body);
-    const response = await fetch("http://127.0.0.1:8000/api/text", {
+    const response = await fetch(`${PYTHON_SERVER_URL}/api/text`, {
       method: "POST",
       headers: {
         "Content-Type": "text/plain",

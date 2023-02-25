@@ -5,6 +5,7 @@ import io
 import requests
 
 app = FastAPI()
+NODE_SERVER_URL="http://127.0.0.1:3000"
 
 @app.post("/api/csv")
 async def parse_csv(request: Request) -> Dict:
@@ -34,7 +35,7 @@ async def parse_csv(request: Request) -> Dict:
 async def parse_json(request: Request) -> Dict:
     try:
         body = await request.body();
-        response = requests.post("http://127.0.0.1:3000/api/json", data=body, headers={'Content-Type': 'application/json'})
+        response = requests.post(f"{NODE_SERVER_URL}/api/json", data=body, headers={'Content-Type': 'application/json'})
 
         return response.json()
     except csv.Error as e:
@@ -44,7 +45,17 @@ async def parse_json(request: Request) -> Dict:
 async def parse_json(request: Request) -> Dict:
     try:
         body = await request.body();
-        response = requests.post("http://127.0.0.1:3000/api/yaml", data=body, headers={'Content-Type': 'application/x-yaml'})
+        response = requests.post(f"{NODE_SERVER_URL}/api/yaml", data=body, headers={'Content-Type': 'application/x-yaml'})
+
+        return response.json()
+    except csv.Error as e:
+        raise HTTPException(status_code=400, detail="Invalid CSV") from e
+    
+@app.post("/api/xml")
+async def parse_json(request: Request) -> Dict:
+    try:
+        body = await request.body();
+        response = requests.post(f"{NODE_SERVER_URL}/api/xml", data=body, headers={'Content-Type': 'application/xml'})
 
         return response.json()
     except csv.Error as e:
