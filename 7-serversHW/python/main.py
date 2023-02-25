@@ -2,6 +2,7 @@ from fastapi import FastAPI, Request
 from typing import Dict
 import csv
 import io
+import requests
 
 app = FastAPI()
 
@@ -28,5 +29,17 @@ async def parse_csv(request: Request) -> Dict:
         return {"data": rows}
     except csv.Error as e:
         raise HTTPException(status_code=400, detail="Invalid CSV") from e
+    
+@app.post("/api/json")
+async def parse_json(request: Request) -> Dict:
+    try:
+        body = await request.body();
+        response = requests.post("http://127.0.0.1:3000/api/json", data=body, headers={'Content-Type': 'application/json'})
+
+        return response.json()
+    except csv.Error as e:
+        raise HTTPException(status_code=400, detail="Invalid CSV") from e
+    
+
 
 
