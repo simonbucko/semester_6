@@ -40,6 +40,16 @@ async def parse_json(request: Request) -> Dict:
     except csv.Error as e:
         raise HTTPException(status_code=400, detail="Invalid CSV") from e
     
+@app.post("/api/yaml")
+async def parse_json(request: Request) -> Dict:
+    try:
+        body = await request.body();
+        response = requests.post("http://127.0.0.1:3000/api/yaml", data=body, headers={'Content-Type': 'application/x-yaml'})
+
+        return response.json()
+    except csv.Error as e:
+        raise HTTPException(status_code=400, detail="Invalid CSV") from e
+    
 
 
 
