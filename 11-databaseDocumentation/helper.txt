@@ -1,0 +1,12 @@
+To create a backup:
+mysqldump -u <username> -p <database_name> > <file_name>.sql
+
+mysqldump -u <username> -p <database_name> --ignore-tables=<table_name> > <file_name>.sql
+
+To restore a backup (database needs to exist):
+mysqldump -u <username> -p <database_name> < <file_name>.sql
+
+U can also copy the `.sql` and put it in `mysql` terminal
+
+To create a documentation
+`npx mro`
