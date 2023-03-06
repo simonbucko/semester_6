@@ -1,0 +1,4 @@
+if request.headers.get("content-type") == "application/x-www-form-urlencoded":
+    payload = await request.form() // this parses form payload, if it is not that type it will crash.
+                                    // python-multipart needs to be installed for this form transform
+    response.status_code = 200 // in fast api u dont need to write return it will return when the function is over
