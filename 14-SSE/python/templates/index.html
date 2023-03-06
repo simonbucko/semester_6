@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Server-sent Events</h1>
+    <p>Status:</p>
+    <br />
+    <div id="status"></div>
+    <p>Time:</p>
+    <br />
+    <div id="events"></div>
+    <script>
+      const eventSource = new EventSource("http://localhost:8000/sse");
+      const serverSentTimeDiv = document.getElementById("events");
+      const serverSentStatusDiv = document.getElementById("status");
+
+      //   eventSource.onmessage = (event) => {
+      //     console.log(event);
+      //   };
+
+      eventSource.end((event) => {
+        console.log("Handling end");
+        eventSource.close();
+      });
+
+      eventSource.addEventListener("new_message", (event) => {
+        // console.log(event);
+        serverSentTimeDiv.innerText = event.data;
+      });
+      //   eventSource.addEventListener("open", (event) => {
+      //     console.log("Connection openned");
+      //     serverSentStatusDiv.innerText = "Connection was openned";
+      //   });
+      //   eventSource.addEventListener("error", (event) => {
+      //     if (eventSource.readyState === EventSource.CLOSED) {
+      //       console.log("Connection was closed");
+      //       serverSentStatusDiv.innerText = "Connection was closed";
+      //     } else if (eventSource.readyState === EventSource.CONNECTING) {
+      //       // this is an advantage to long polling that it has connect functionality
+      //       console.log("Connection is trying to reconnect");
+      //       serverSentStatusDiv.innerText = "Connection is trying to reconnect";
+      //     }
+      //   });
+    </script>
+  </body>
+</html>
