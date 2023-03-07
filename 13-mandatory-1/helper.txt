@@ -1,0 +1,11 @@
+mysql -h mysql-sibu.mysql.database.azure.com -u sibu -p
+
+Tables:
+    customers - CANT READ  
+    payments - CANT READ
+    orders - CAN OLNY READ
+    orderdetails - CAN ONLY READ
+    productlines - CAN ONLY READ
+    products - CAN ONLY READ
+    employees - CAN WRITE AND READ
+    offices - CAN WIRTE AND READ
