@@ -15,3 +15,6 @@ func start
 
 To publish: (this requires a Azure CLI)
 func azure <functionapp> publish <functionname>
+
+You can also use azure functions extensions
+You can use the extension to also create apps
