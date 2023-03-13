@@ -1,0 +1,17 @@
+there is a free services package in azure we can use for free month
+function app is a container that can contain multiple functions 
+when you delete the function app you also need to delete the storage
+when you create a sftp use a create user with "container" access
+in serverless function I can not use console but I can only use context
+
+To initialize a new project
+func init <name>
+
+To create a template run: (be inside of the initialized directory)
+func new --template "Http Trigger" --name <name>
+
+To run the funciton: (be inside of the initialized directory)
+func start
+
+To publish: (this requires a Azure CLI)
+func azure <functionapp> publish <functionname>
