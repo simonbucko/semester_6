@@ -27,8 +27,7 @@ router.post("/hooks/user-created/register", (req, res) => {
 });
 
 router.post("/hooks/user-created/ping", async (req, res) => {
-  console.log("im here");
-  registeredHooks = getAllRegistereeForUserCreated();
+  const registeredHooks = getAllRegistereeForUserCreated();
   registeredHooks.forEach(async (hookUrl) => {
     const requestBody = {
       msg: `${hookUrl} is registered for user create events`,
@@ -55,7 +54,7 @@ router.post("/hooks/user-deleted/register", (req, res) => {
 });
 
 router.post("/hooks/user-deleted/ping", async (req, res) => {
-  registeredHooks = getAllRegistereeForUserDeleted();
+  const registeredHooks = getAllRegistereeForUserDeleted();
   registeredHooks.forEach(async (hookUrl) => {
     const requestBody = {
       msg: `${hookUrl} is registered for user delete events`,

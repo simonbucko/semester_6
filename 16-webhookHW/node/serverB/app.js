@@ -41,12 +41,13 @@ const unregisterHookCreateUser = async () => {
 };
 
 const pingCreateUser = async () => {
+  const requestBody = {};
   await fetch("http://127.0.0.1:8080/hooks/user-created/ping", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: {},
+    body: JSON.stringify(requestBody),
   });
 };
 
@@ -77,21 +78,22 @@ const unregisterHookDeleteUser = async () => {
 };
 
 const pingDeleteUser = async () => {
+  const requestBody = {};
   await fetch("http://127.0.0.1:8080/hooks/user-deleted/ping", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: {},
+    body: JSON.stringify(requestBody),
   });
 };
 
-// await registerHookCreateUser();
+await registerHookCreateUser();
 await pingCreateUser();
-// await unregisterHookCreateUser();
-// await pingCreateUser();
+await unregisterHookCreateUser();
+await pingCreateUser();
 
-// await registerHookDeleteUser();
-// await pingDeleteUser();
-// await unregisterHookDeleteUser();
-// await pingDeleteUser();
+await registerHookDeleteUser();
+await pingDeleteUser();
+await unregisterHookDeleteUser();
+await pingDeleteUser();
