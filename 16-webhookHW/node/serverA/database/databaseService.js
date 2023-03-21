@@ -15,6 +15,9 @@ export const getAllRegistereeForUserDeleted = () => {
 };
 
 export const registerForUserCreation = (url) => {
+  database.hooks.userCreated = database.hooks.userCreated.filter(
+    (item) => item !== url
+  );
   database.hooks.userCreated.push(url);
   saveChanges();
 };
@@ -27,6 +30,9 @@ export const unregisterForUserCreation = (url) => {
 };
 
 export const registerForUserDeletion = (url) => {
+  database.hooks.userDeleted = database.hooks.userDeleted.filter(
+    (item) => item !== url
+  );
   database.hooks.userDeleted.push(url);
   saveChanges();
 };

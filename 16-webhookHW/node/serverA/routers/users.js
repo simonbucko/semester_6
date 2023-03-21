@@ -2,10 +2,6 @@ import { Router } from "express";
 import {
   getAllRegistereeForUserCreated,
   getAllRegistereeForUserDeleted,
-  registerForUserCreation,
-  unregisterForUserCreation,
-  registerForUserDeletion,
-  unregisterForUserDeletion,
 } from "../database/databaseService.js";
 import fetch from "node-fetch";
 

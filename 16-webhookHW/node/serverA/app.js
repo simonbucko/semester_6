@@ -1,6 +1,8 @@
 import express from "express";
-import hooksRouter from "./routes/hooks.js";
-import usersRouter from "./routes/users.js";
+import swaggerUi from "swagger-ui-express";
+import swaggerJSDoc from "swagger-jsdoc";
+import hooksRouter from "./routers/hooks.js";
+import usersRouter from "./routers/users.js";
 
 const PORT = 8080;
 const app = express();
@@ -11,6 +13,19 @@ app.use(express.static("public"));
 app.use(hooksRouter);
 app.use(usersRouter);
 
-app.post("/users", async (req, res) => {});
+const swaggerDefinition = {
+  openapi: "3.0.0",
+  info: {
+    title: "WebHooks API",
+    version: "1.0.0",
+    description:
+      "This is the documentation for the webhooks manadatory assignment",
+  },
+};
+const options = {
+  swaggerDefinition,
+  apis: ["./routers/*.js"],
+};
+app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerJSDoc(options)));
 
 app.listen(PORT, () => console.log(`Listenning on port ${PORT}`));
