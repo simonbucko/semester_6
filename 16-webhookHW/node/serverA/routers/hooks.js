@@ -43,7 +43,7 @@ router.post("/hooks/user-created/register", (req, res) => {
  *      tags:
  *        [web hooks]
  *      summary: Ping all urls registered for user creation event
- *      description: Use this endpoint to test whether your url is successfully registered for user creation
+ *      description: Use this endpoint to test whether your url is successfully registered for user creation. If yes, you should receive a dummy payload to your registered url
  *      responses:
  *        '200':
  *          description: A ping has been successfully sent to all registered urls for user creation
@@ -124,7 +124,7 @@ router.post("/hooks/user-deleted/register", (req, res) => {
  *      tags:
  *        [web hooks]
  *      summary: Ping all urls registered for user deletion event
- *      description: Use this endpoint to test whether your url is successfully registered for user deletion
+ *      description: Use this endpoint to test whether your url is successfully registered for user deletion. If yes, you should receive a dummy payload to your registered url
  *      responses:
  *        '200':
  *          description: A ping has been successfully sent to all registered urls for user deletion
