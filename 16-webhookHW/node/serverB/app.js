@@ -89,11 +89,11 @@ const pingDeleteUser = async () => {
 };
 
 await registerHookCreateUser();
-await pingCreateUser();
-await unregisterHookCreateUser();
-await pingCreateUser();
+// await pingCreateUser();
+// await unregisterHookCreateUser();
+// await pingCreateUser();
 
 await registerHookDeleteUser();
-await pingDeleteUser();
-await unregisterHookDeleteUser();
-await pingDeleteUser();
+// await pingDeleteUser();
+// await unregisterHookDeleteUser();
+// await pingDeleteUser();

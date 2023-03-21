@@ -1,1 +1,1 @@
-{"hooks":{"userCreated":[],"userDeleted":[]}}
+{"hooks":{"userCreated":["http://127.0.0.1:8081/hook/payload"],"userDeleted":["http://127.0.0.1:8081/hook/payload"]}}
