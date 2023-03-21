@@ -18,13 +18,15 @@ router.post("/users", async (req, res) => {
     const requestBody = {
       msg: `${userName} has been created`,
     };
-    await fetch(hookUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(requestBody),
-    });
+    try {
+      await fetch(hookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(requestBody),
+      });
+    } catch {}
   });
   res.send();
 });
@@ -36,13 +38,15 @@ router.delete("/users", async (req, res) => {
     const requestBody = {
       msg: `${userName} has been deleted`,
     };
-    await fetch(hookUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(requestBody),
-    });
+    try {
+      await fetch(hookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(requestBody),
+      });
+    } catch {}
   });
   res.send();
 });

@@ -32,13 +32,15 @@ router.post("/hooks/user-created/ping", async (req, res) => {
     const requestBody = {
       msg: `${hookUrl} is registered for user create events`,
     };
-    await fetch(hookUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(requestBody),
-    });
+    try {
+      await fetch(hookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(requestBody),
+      });
+    } catch {}
   });
   res.send();
 });
@@ -59,13 +61,15 @@ router.post("/hooks/user-deleted/ping", async (req, res) => {
     const requestBody = {
       msg: `${hookUrl} is registered for user delete events`,
     };
-    await fetch(hookUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(requestBody),
-    });
+    try {
+      await fetch(hookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(requestBody),
+      });
+    } catch {}
   });
   res.send();
 });
