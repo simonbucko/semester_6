@@ -7,6 +7,7 @@ const app = express();
 const registeredHooksURLs = [];
 
 app.use(express.json());
+app.use(express.static("public"));
 
 app.post("/hook/register", (req, res) => {
   console.log(req.body);
