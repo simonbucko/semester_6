@@ -1,0 +1,5 @@
+crontab -e = edit cron jobs
+crontab -l = list all cron jobs for a user
+sh [scriptName] = run the script
+service cron status = see the status of cron
+service cron start = start the cron job
