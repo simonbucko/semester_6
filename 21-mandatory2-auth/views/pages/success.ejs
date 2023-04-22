@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Github OAuth</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        padding-top: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1><span class="fa fa-github"></span> Github Information</h1>
+      <p>
+        <strong>Name</strong>: <%= userData.name %><br />
+        <strong>Username</strong>: <%= userData.login %><br />
+        <strong>Company</strong>: <%= userData.company %><br />
+        <strong>Bio</strong>: <%= userData.bio %>
+      </p>
+    </div>
+  </body>
+</html>
