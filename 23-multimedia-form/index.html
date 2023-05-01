@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <h2>Multipart/form data</h2>
+    <form action="http://127.0.0.1:8000/form" method="POST">
+      <input type="text" name="username" placeholder="username" />
+      <input type="password" name="password" placeholder="password" />
+
+      <button type="submit">submit</button>
+    </form>
+
+    <form
+      action="http://127.0.0.1:8000/fileform"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <input type="file" name="file" placeholder="username" />
+      <input name="desctription" placeholder="short description" />
+
+      <button type="submit">submit</button>
+    </form>
+  </body>
+</html>

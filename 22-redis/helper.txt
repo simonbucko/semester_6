@@ -1,0 +1,7 @@
+docker exec -it redis redis-cli // connect to the docker instance. "redis" is the name of the container
+
+LRANGE <listname> 0 -1 // to print the whole list
+
+hyperloglogs - use to count stuff in a high traffic
+
+//TODO: look to presentation to see all the commands
