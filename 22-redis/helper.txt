@@ -4,4 +4,8 @@ LRANGE <listname> 0 -1 // to print the whole list
 
 hyperloglogs - use to count stuff in a high traffic
 
+when you use crateClient() with no options it will by default connect to localhost and default redis port
+
+redisClient.on("connect", ()=>{})
+
 //TODO: look to presentation to see all the commands
