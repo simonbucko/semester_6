@@ -8,4 +8,6 @@ when you use crateClient() with no options it will by default connect to localho
 
 redisClient.on("connect", ()=>{})
 
+redis supports 0-15 databases so db=0 means to use the index 1
+
 //TODO: look to presentation to see all the commands
