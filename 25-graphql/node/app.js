@@ -1,27 +1,25 @@
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
 import fs from "fs";
+import {
+  getBlogsResolver,
+  getBlogResolver,
+  createBlogResolver,
+} from "./graphql/resolvers/blogsResolvers.js";
 
-const books = [
-  {
-    title: "The Awakening",
-    author: "Kate Chopin",
-  },
-  {
-    title: "City of Glass",
-    author: "Paul Auster",
-  },
-];
-
-// Resolvers define how to fetch the types defined in your schema.
+// Resolvers define how to fetch the types defined  schema.
 const resolvers = {
   Query: {
-    books: () => books,
+    blogs: getBlogsResolver,
+    blog: getBlogResolver,
+  },
+  Mutation: {
+    createBlog: createBlogResolver,
   },
 };
 
 const server = new ApolloServer({
-  typeDefs: fs.readFileSync("./graphql/schema.graphql", "utf8"),
+  typeDefs: fs.readFileSync("./graphql/schema/schema.graphql", "utf8"),
   resolvers,
 });
 
