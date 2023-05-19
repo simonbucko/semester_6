@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="keywords"
+      content="portfolio,Simon,Simon Bucko, Bucko, Web, developer, Web Developer"
+    />
+    <meta property="og:url" content="https://simonbucko.github.io/portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Šimon Bučko" />
+    <meta
+      property="og:description"
+      content="Check out my protfolio and get in touch with me!"
+    />
+    <meta
+      property="og:image"
+      content="https://simonbucko.github.io/legendsoffloorball/images/oznamkoFotka.png"
+    />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="400" />
+
+    <link rel="icon" href="./images/websiteIcon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Šimon Bučko</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main class="fullPage">
+      <nav class="buttons">
+        <i id="up" class="fas fa-circle navButton"></i>
+        <i id="middle" class="fas fa-circle navButton"></i>
+        <i id="down" class="fas fa-circle navButton"></i>
+      </nav>
+      <section id="0">
+        <div class="video-container">
+          <video
+            id="backGroundVideo"
+            src="./videos/FinalbackgroundCompressed.m4v"
+            muted
+            autoplay
+            loop
+          ></video>
+        </div>
+        <div class="scrollAnimation">
+          
+          <div class="content">
+            <div class="profilText">My name is Šimon Bučko</div>
+            <span class="profilText">
+              and I am <span id="profilTextBox"></span><span id="cursor"></span>
+            </span>
+          </div>
+        </div>
+      </section>
+      <section id="1">
+        <h2 id="technologiesTitle">Skill Set</h2>
+        <div class="technologiesAnimation">
+          <ul>
+            <li class="animatedLi">HTML5</li>
+            <li class="animatedLi">CSS3</li>
+            <li class="animatedLi">JavaScript</li>
+            <li class="animatedLi">React</li>
+            <li class="animatedLi">TypeScript</li>
+            <li class="animatedLi">PHP</li>
+            <li class="animatedLi">SQL</li>
+            <li class="animatedLi">MySQL</li>
+            <li class="animatedLi">NodeJS</li>
+            <li class="animatedLi">Java</li>
+            <li class="animatedLi">NextJS</li>
+            <li class="animatedLi">Express</li>
+            <li class="animatedLi">MongoDB</li>
+            <li class="animatedLi">AWS</li>
+            <li class="animatedLi">Docker</li>
+            <li class="animatedLi">Redux</li>
+          </ul>
+        </div>
+      </section>
+      <section id="2">
+        <h2 id="projectTitle">Projects</h2>
+        <div class="projectsContent">
+          <div class="projectCard">
+            <h3>Path finding visualizer</h3>
+            <div class="projectImage pathVisualizer">
+              <div class="projectInfo">
+                <div class="projectInfoDescription">
+                  <h5 class="descriptionTitle">Description</h5>
+                  <p class="descriptionText">
+                    Have you ever wondered how google maps find you the best and the 
+                    fastest way from point A to point B? What kind of magic is behind
+                     it? Well, there is no magic! Just a bundle of algorithms and this 
+                     project will help you to visualize and understand how those algorithms search and work.
+                  </p>
+                  <h5 class="usedTechnologyTitle">Used techonology</h5>
+                  <p class="usedTechnology">
+                    HTML / SCSS / JavaScript / React / Material-UI
+                  </p>
+                </div>
+                <div class="projectInfoLinks">
+                  <a
+                    class="projectLink"
+                    target="_blank"
+                    href="https://path-solving-visualizer.netlify.app/?fbclid=IwAR3SP8lm1uiX44vEI2guNZUMUAhyfY1Wh6CIzOhA5OK0wPR8H_XQDUkbrvs"
+                    ><i class="fas fa-external-link-alt"></i>Project</a
+                  >
+                  <a
+                    class="projectLink"
+                    target="_blank"
+                    href="https://github.com/simonbucko/path_visualizer"
+                    ><i class="fab fa-github"></i>Github</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="projectCard">
+            <h3>Subscription Articles</h3>
+            <div class="projectImage subscription">
+              <div class="projectInfo">
+                <div class="projectInfoDescription">
+                  <h5 class="descriptionTitle">Description</h5>
+                  <p class="descriptionText">
+                    This project is used to display articles based on the subscription plan,
+                    that a user has subscribed to. The project offers 3 subscriptions plans: 
+                    Basic, Standard, and Premium. Stripe is used as a payment gateway to create 
+                    a secure and reliable payment system.
+                  </p>
+                  <h5 class="usedTechnologyTitle">Used techonology</h5>
+                  <p class="usedTechnology">
+                    React / TypeScript / MongoDB / Express / Stripe / NodeJS 
+                  </p>
+                </div>
+                <div class="projectInfoLinks">
+                  <a
+                    class="projectLink"
+                    target="_blank"
+                    href="https://subsb.netlify.app/"
+                    ><i class="fas fa-external-link-alt"></i>Project</a
+                  >
+                  <a
+                    class="projectLink"
+                    target="_blank"
+                    href="https://github.com/simonbucko/subscribe_client"
+                    ><i class="fab fa-github"></i>Github</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="projectCard">
+            <h3>Blog</h3>
+            <div class="projectImage simonBlog">
+              <div class="projectInfo">
+                <div class="projectInfoDescription">
+                  <h5 class="descriptionTitle">Description</h5>
+                  <p class="descriptionText">
+                    This project's purpose is to create a blog, which can be highly adjustable
+                    using NextJS, while still keeping a blog management system like GraphCMS as 
+                    a backend solution. The blog is hosted on Vercel, which makes it extremely
+                    easy to update project thank to CI/CD pipeline  
+                  </p>
+                  <h5 class="usedTechnologyTitle">Used techonology</h5>
+                  <p class="usedTechnology">
+                    NextJS / TypeScript / GraphQL / Vercel / GraphCMS
+                  </p>
+                </div>
+                <div class="projectInfoLinks">
+                  <a
+                    class="projectLink"
+                    target="_blank"
+                    href="https://blog-simonbucko.vercel.app/"
+                    ><i class="fas fa-external-link-alt"></i>Project</a
+                  >
+                  <a
+                    class="projectLink"
+                    target="_blank"
+                    href="https://github.com/simonbucko/blog"
+                    ><i class="fab fa-github"></i>Github</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="projectCard">
+            <h3>Social App</h3>
+            <div class="projectImage socialApp">
+              <div class="projectInfo">
+                <div class="projectInfoDescription">
+                  <h5 class="descriptionTitle">Description</h5>
+                  <p class="descriptionText">
+                    This particular project is a small clone of any social app.
+                    It allows users to create accounts, log in, change profile picture,
+                    edit bio. It also allows logged users to post/like/comment posts, which were added by other users. Users will also receive notifications
+                    if someone likes/comments on their posts.
+                  </p>
+                  <h5 class="usedTechnologyTitle">Used techonology</h5>
+                  <p class="usedTechnology">React / Redux / NodeJS / Express / NoSQL / Cloud Functions</p>
+                </div>
+                <div class="projectInfoLinks">
+                  <a
+                    class="projectLink"
+                    target="_blank"
+                    href="https://socialclone-app.web.app/"
+                    ><i class="fas fa-external-link-alt"></i>Project</a
+                  >
+                  <a
+                    class="projectLink"
+                    target="_blank"
+                    href="https://github.com/simonbucko/socialApp-client"
+                    ><i class="fab fa-github"></i>Github</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="projectCard">
+            <h3>Memories App</h3>
+            <div class="projectImage memoriesApp">
+              <div class="projectInfo">
+                <div class="projectInfoDescription">
+                  <h5 class="descriptionTitle">Description</h5>
+                  <p class="descriptionText">
+                    This full-stack project allows users to create accounts and share their memories among others. Login interface allows users also to use google auth or classical email login. Once logged in,
+                    user can create, like memories or delete his/her own memories.
+                    The projects use a combination of MongoDB and express in the backend
+                    and react as frontend technology.
+                  </p>
+                  <h5 class="usedTechnologyTitle">Used techonology</h5>
+                  <p class="usedTechnology">React / Redux / NodeJS / Express / MongoDB / Google AUTH</p>
+                </div>
+                <div class="projectInfoLinks">
+                  <a
+                    class="projectLink"
+                    target="_blank"
+                    href="https://memories-a-p-p.netlify.app/"
+                    ><i class="fas fa-external-link-alt"></i>Project</a
+                  >
+                  <a
+                    class="projectLink"
+                    target="_blank"
+                    href="https://github.com/simonbucko/memories_app"
+                    ><i class="fab fa-github"></i>Github</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="projectCard">
+            <h3>Planning</h3>
+            <div class="projectImage planning">
+              <div class="projectInfo">
+                <div class="projectInfoDescription">
+                  <h5 class="descriptionTitle">Description</h5>
+                  <p class="descriptionText">
+                    This project is used to enable users to create an account 
+                    and create plans. In addition, they can also see other 
+                    user's activity like for example if someone creates a 
+                    new plan or if new user opens the account.
+                  </p>
+                  <h5 class="usedTechnologyTitle">Used techonology</h5>
+                  <p class="usedTechnology">
+                    React / Redux / Firebase / Firestore-NoSQL
+                  </p>
+                </div>
+                <div class="projectInfoLinks">
+                  <a
+                    class="projectLink"
+                    target="_blank"
+                    href="https://simonbucko.github.io/signup"
+                    ><i class="fas fa-external-link-alt"></i>Project</a
+                  >
+                  <a
+                    class="projectLink"
+                    target="_blank"
+                    href="https://github.com/simonbucko/SIMONplan"
+                    ><i class="fab fa-github"></i>Github</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span class="contact-me">Contact me</span>
+      <div class="socialLinks">
+        <ul>
+          <li>
+            <a target="_blank" href="https://github.com/simonbucko"
+              ><i id="githubLink" class="fab fa-github"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/%C5%A1imon-bu%C4%8Dko/"
+              ><i id="linkLnLink" class="fab fa-linkedin"></i
+            ></a>
+          </li>
+          <li>
+            <a target="_blank" href="mailto:simon.bucko.web@gmail.com"
+              ><i id="mailToLink" class="far fa-envelope"></i
+            ></a>
+          </li>
+          <li>
+            <a href="./CV/Simon_Bucko_CV.pdf" target="_blank"
+        ><i id="pdfLink" class="far fa-file-pdf"></i></a>
+          </li>
+        </ul>
+      </div>
+      <span>&copy;2022 Šimon Bučko</span>
+    </footer>
+
+    <script src="./js/scroll.js"></script>
+    <script src="./js/typing.js"></script>
+    <script src="./js/listAnimation.js"></script>
+  </body>
+</html>
