@@ -6,6 +6,7 @@ import {
   getBlogResolver,
   createBlogResolver,
 } from "./graphql/resolvers/blogsResolvers.js";
+import { createUserResolver } from "./graphql/resolvers/usersResolver.js";
 
 // Resolvers define how to fetch the types defined  schema.
 const resolvers = {
@@ -15,6 +16,7 @@ const resolvers = {
   },
   Mutation: {
     createBlog: createBlogResolver,
+    createUser: createUserResolver,
   },
 };
 
