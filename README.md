@@ -1,1 +1,1 @@
-`nodemon --exec python3 [FILE_NAME]` = to run the python
+`nodemon --exec python [FILE_NAME]` = to run the python
