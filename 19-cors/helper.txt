@@ -1,1 +1,7 @@
 CORS happens in the browser
+
+app.use(cors({
+  origin: '*', // Allow requests from any origin
+  methods: 'GET, POST, PUT, DELETE', // Allow specified HTTP methods
+  allowedHeaders: 'Content-Type, Authorization', // Allow specified headers
+}));
